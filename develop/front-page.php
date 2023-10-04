@@ -40,7 +40,7 @@ get_header();
 					<p class="mb-2">This dental dilemma begins innocently enough—with the formation of plaque and tartar. But here's the good news: you have the power to change this. Imagine giving your dog a treat they'll love, which also keeps their teeth clean and gums healthy.</p>
 					<h2 class="text-2xl mb-2">Clean Gnashers Monthly Subscription Boxes</h2>
 					<p class="mb-2">With our monthly Clean Gnashers subscription boxes, filled with firm, chewable treats, you can consistently remove troublesome plaque before it hardens, effectively tackling the root cause of dental issues</p>
-					<a href="whats-in-the-box" class="btn text-black bg-green-500 px-2 py-1 inline-block">More Info</a>
+					<a href="#whats-in-the-box" class="btn text-black bg-green-500 px-2 py-1 inline-block">What's in the box?</a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +84,7 @@ get_header();
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/treatbox.png" alt="Clean Gnashers Treat Box" class="w-full mb-2">
 					<h2 class="text-3xl">Here's what you get - Offer headline</h2>
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ratione distinctio corporis vel accusantium recusandae praesentium incidunt, eveniet sequi perspiciatis.</p>
-					<div class="btn text-black bg-green-500 px-2 py-1 inline-block">Get 30% Off Your First Box = Free Shipping</div>
+					<div class="btn text-black bg-green-500 px-2 py-1 inline-block cursor-pointer hover:bg-black hover:text-white openModalBtn">Get 30% Off Your First Box + FREE Delivery</div>
 				</div>
 			</div>
 		</div>
@@ -94,10 +94,59 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<p>Image and testimonial text</p>
+					<div id="testimonial-slider" class="swiper-container relative">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide mb-12">
+								<div class="max-w-2xl mx-auto h-full flex flex-col justify-between">
+									<img class="h-9 opacity-70 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-icon.svg" alt="quote icon">											
+									<div class="testimonial-text mt-14">
+										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellat!
+									</div>
+									<div class="grid md:grid-cols-2 gap-x-6 mt-4">											
+										<div class="flex justify-center md:justify-end">
+											<img class="h-[105px] rounded-full aspect-square object-cover" src="" alt="">
+										</div>
+										<div class="author flex justify-center md:justify-start">
+											<div>
+												<p class="name font-bold text-lg text-center mt-6">Lorem, ipsum dolor.,</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide mb-12">
+								<div class="max-w-2xl mx-auto h-full flex flex-col justify-between">
+									<img class="h-9 opacity-70 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/images/quote-icon.svg" alt="quote icon">											
+									<div class="testimonial-text mt-14">
+										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, repellat!
+									</div>
+									<div class="grid md:grid-cols-2 gap-x-6 mt-4">											
+										<div class="flex justify-center md:justify-end">
+											<img class="h-[105px] rounded-full aspect-square object-cover" src="" alt="">
+										</div>
+										<div class="author flex justify-center md:justify-start">
+											<div>
+												<p class="name font-bold text-lg text-center mt-6">Lorem, ipsum dolor.,</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>		
+						</div>
+						<div class="swiper-pagination relative flex items-center justify-center"></div>
+						<!-- Add navigation arrows -->
+						<div class="hidden lg:block">
+							<div class="swiper-button-next">
+								<i class="fa fa-angle-right text-5xl text-white" aria-hidden="true"></i>
+							</div>
+							<div class="swiper-button-prev">
+								<i class="fa fa-angle-left text-5xl text-white" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="col">
-					<button>CTA Button</button>
+				<div class="col text-center mt-4">
+				<div class="btn text-black bg-green-500 px-2 py-1 inline-block cursor-pointer hover:bg-black hover:text-white openModalBtn">Unlock Special Offer</div>
 				</div>
 			</div>
 		</div>
@@ -162,5 +211,86 @@ get_header();
 
 	</main><!-- #main -->
 
+
+<script>
+function updateCountdown() {
+	const now = new Date();
+	const nowUtc = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+	const midnightUtc = new Date(nowUtc);
+	midnightUtc.setHours(24, 0, 0, 0);
+
+	const difference = midnightUtc - nowUtc;
+	const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+  // Get all elements with the 'countdown' class
+  const countdownElements = document.querySelectorAll('.countdown');
+
+  countdownElements.forEach((element) => {
+    const hoursElem = element.querySelector('.hours');
+    const minutesElem = element.querySelector('.minutes');
+    const secondsElem = element.querySelector('.seconds');
+
+    if (hoursElem) hoursElem.textContent = String(hours).padStart(2, '0');
+    if (minutesElem) minutesElem.textContent = String(minutes).padStart(2, '0');
+    if (secondsElem) secondsElem.textContent = String(seconds).padStart(2, '0');
+  });
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Call the function immediately to avoid 1-second delay
+
+// Get the modal element
+const modal = document.getElementById("myModal");
+
+// Get all buttons with the common class name
+const buttons = document.getElementsByClassName("openModalBtn");
+
+// Get the element that closes the modal
+const closeBtn = document.getElementById("closeModalBtn");
+
+// Flag to check if exit intent has already triggered the modal
+let exitIntentTriggered = false;
+
+// Function to open modal
+function openModal() {
+  modal.classList.remove('hidden');
+}
+
+// Function to close modal
+function closeModal() {
+  modal.classList.add('hidden');
+}
+
+// Loop through all buttons to add event listeners
+for (let btn of buttons) {
+  btn.addEventListener('click', function() {
+    openModal();
+  });
+}
+
+// When the user clicks on <span> (x), close the modal
+closeBtn.addEventListener('click', closeModal);
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// Detect exit intent
+document.addEventListener('mousemove', function(e) {
+  if (e.clientY <= 5 && !exitIntentTriggered) {
+    openModal();
+    // Set exitIntentTriggered flag to true so it only happens once
+    exitIntentTriggered = true;
+  }
+});
+
+
+
+</script>
 <?php
 get_footer();

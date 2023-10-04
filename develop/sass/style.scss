@@ -106,6 +106,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+  }
+
 .container {
 	  @apply max-w-6xl mx-auto px-12 py-2;
 }

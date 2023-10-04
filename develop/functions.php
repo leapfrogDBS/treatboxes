@@ -143,8 +143,7 @@ function treatboxes_scripts() {
 	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0' );
     wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' );
 
-	wp_enqueue_script( 'treatboxes-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	
+
 	// Enqueue scripts
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), null, true );
     wp_enqueue_script( 'app-js', get_template_directory_uri() . '/scripts/app.min.js', array('swiper'), null, true );
