@@ -17,16 +17,6 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-	<section id="top-bar">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h1>Top Bar</h1>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	<section id="nav-bar">
 		<div class="container">
 			<div class="row">

@@ -107,5 +107,5 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @tailwind utilities;
 
 .container {
-	  @apply max-w-6xl mx-auto px-4;
+	  @apply max-w-6xl mx-auto px-4 py-2;
 }
