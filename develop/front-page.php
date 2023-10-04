@@ -214,32 +214,33 @@ get_header();
 
 <script>
 function updateCountdown() {
-	const now = new Date();
-	const nowUtc = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
-	const midnightUtc = new Date(nowUtc);
-	midnightUtc.setHours(24, 0, 0, 0);
+    const now = new Date();
+    const nowUtc = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds()));
 
-	const difference = midnightUtc - nowUtc;
-	const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-	const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const midnightUtc = new Date(Date.UTC(nowUtc.getUTCFullYear(), nowUtc.getUTCMonth(), nowUtc.getUTCDate() + 1, 0, 0, 0));
+    const difference = midnightUtc - nowUtc;
 
-  // Get all elements with the 'countdown' class
-  const countdownElements = document.querySelectorAll('.countdown');
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)-1);
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-  countdownElements.forEach((element) => {
-    const hoursElem = element.querySelector('.hours');
-    const minutesElem = element.querySelector('.minutes');
-    const secondsElem = element.querySelector('.seconds');
+    // Get all elements with the 'countdown' class
+    const countdownElements = document.querySelectorAll('.countdown');
 
-    if (hoursElem) hoursElem.textContent = String(hours).padStart(2, '0');
-    if (minutesElem) minutesElem.textContent = String(minutes).padStart(2, '0');
-    if (secondsElem) secondsElem.textContent = String(seconds).padStart(2, '0');
-  });
+    countdownElements.forEach((element) => {
+        const hoursElem = element.querySelector('.hours');
+        const minutesElem = element.querySelector('.minutes');
+        const secondsElem = element.querySelector('.seconds');
+
+        if (hoursElem) hoursElem.textContent = String(hours).padStart(2, '0');
+        if (minutesElem) minutesElem.textContent = String(minutes).padStart(2, '0');
+        if (secondsElem) secondsElem.textContent = String(seconds).padStart(2, '0');
+    });
 }
 
 setInterval(updateCountdown, 1000);
-updateCountdown(); // Call the function immediately to avoid 1-second delay
+updateCountdown();  // Call the function immediately to avoid a 1-second delay
+
 
 // Get the modal element
 const modal = document.getElementById("myModal");
