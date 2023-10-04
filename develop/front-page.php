@@ -15,55 +15,76 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-	<section id="nav-bar">
+	<section id="logo-header" class="bg-white">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<h1>Nav Bar</h1>
+				<div class="col flex justify-center">
+					<div class="flex flex-col items-center">
+						<a href="https://barkbites.co.uk/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/BB-logo.png" alt="Bark Bites Logo" class="h-11 w-auto mb-1"></a>
+						<a href="https://uk.trustpilot.com/review/barkbites.co.uk" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/truspilot.png" alt="Truspilot Logo" class="h-6 w-auto"></a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="hero">
-		<div class="container">
+	<section id="hero" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/dog-teeth.jpeg)" class="bg-cover bg-center py-24 text-white relative z-10">
+		<div class="absolute inset-0 bg-black bg-opacity-50"></div>
+		<div class="container z-20 relative">
 			<div class="row">
-				<div class="col">
-					<h1>Did You Know That 2/3 Of Dogs Over The Age Of 3 Suffer From Periodontal Disease?</h1>
-					<h2>Clean Gnashers</h2>
-					<h3>Monthly Subscription Boxes</h3>
-					<p>Did you know that an alarming 2/3 of dogs over the age of 3 are affected by some form of periodontal disease? It's the most common health issue plaguing our four-legged friends (Hiscox and Bellows, 2021).</p>
-					<p>This dental dilemma begins innocently enough—with the formation of plaque and tartar. But here's the good news: you have the power to change this. Imagine giving your dog a treat they'll love, which also keeps their teeth clean and gums healthy.</p>
-					<p>With our monthly Clean Gnashers subscription boxes, filled with firm, chewable treats, you can consistently remove troublesome plaque before it hardens, effectively tackling the root cause of dental issues</p>
-					<button>Get 30% Off Your First Box = Free Shipping</button>
+				<div class="col md:w-1/2">
+					<h1 class="text-5xl mb-2">Did You Know That 2/3 Of Dogs Over The Age Of 3 Suffer From Periodontal Disease?</h1>
+					<p class="mb-2">It's the most common health issue plaguing our four-legged friends (Hiscox and Bellows, 2021).</p>
+					<p class="mb-2">This dental dilemma begins innocently enough—with the formation of plaque and tartar. But here's the good news: you have the power to change this. Imagine giving your dog a treat they'll love, which also keeps their teeth clean and gums healthy.</p>
+					<h2 class="text-2xl mb-2">Clean Gnashers Monthly Subscription Boxes</h2>
+					<p class="mb-2">With our monthly Clean Gnashers subscription boxes, filled with firm, chewable treats, you can consistently remove troublesome plaque before it hardens, effectively tackling the root cause of dental issues</p>
+					<a href="whats-in-the-box" class="btn text-black bg-green-500 px-2 py-1 inline-block">More Info</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="banner">
+	<section id="banner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banner.jpeg)" class="bg-center bg-cover py-24">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<h2>100% Natural, Grain-Free, and Rawhide-Free for Your Peace of Mind</h2>
+				<div class="col text-white text-center">
+					<h2 class="text-5xl">100% Natural, Grain-Free, and Rawhide-Free for Your Peace of Mind</h2>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="whats-in-the-box">
+	<section id="whats-in-the-box" class="py-24">
 		<div class="container">
-			<div class="row">
+			<div class="row grid grid-cols-2 gap-x-12">
 				<div class="col">
-					<h1>What is in the box?</h1>
-					<p>Product Description</p>
+					<h2 class="text-3xl mb-2">What is in the box?</h2>
+					<p>These all-natural dog treats not only taste great, but they also help to keep your furry friend's teeth clean and healthy. 🦷</p>
+					<p>These treats have been specially selected to help to scrape away plaque and tartar buildup on your dog's teeth.</p>
+					<p>Free from artificial colors, flavors, and preservatives, you can feel good about giving them to your furry friend as a healthy and wholesome snack.<p>
+					<p>Try these natural dog treats today and see the difference they can make for your hound's dental health</p>
+					<p>Suitable for small dogs 3kg+</p>
+					<p class="font-semibold">Contains:</p>
+					<ul class="list-disc list-inside">
+						<li>Hairy Rabbit Ear</li>
+						<li>2 x Hairless Rabbit Ears</li>
+						<li>2 x Chicken feet </li>
+						<li>2 x Small Beef Muscle Piece</li>
+						<li>Small Camel Skin Piece</li>
+						<li>Small Goat Skin Piece</li>
+						<li>Small moon bone </li>
+						<li>2 x Skinny Pizzle</li>
+						<li>Pork spaghetti 50g</li>
+					</ul>
+					<p class="text-sm">PLEASE NOTE any items that are out of stock will be swapped with an item(s) of equivalent value that is as close as possible to the out of stock item.</p>
 				</div>
 				<div class="col" id="offer">
-					<h2>Here's what you get - Offer headline</h2>
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/treatbox.png" alt="Clean Gnashers Treat Box" class="w-full mb-2">
+					<h2 class="text-3xl">Here's what you get - Offer headline</h2>
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero ratione distinctio corporis vel accusantium recusandae praesentium incidunt, eveniet sequi perspiciatis.</p>
-					<button>Get 30% Off Your First Box = Free Shipping</button>
+					<div class="btn text-black bg-green-500 px-2 py-1 inline-block">Get 30% Off Your First Box = Free Shipping</div>
 				</div>
 			</div>
 		</div>

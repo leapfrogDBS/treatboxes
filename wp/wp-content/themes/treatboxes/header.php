@@ -23,32 +23,35 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="masthead" class="site-header  sticky top-0">
+	<header id="masthead" class="site-header  sticky top-0 z-50">
 		<section id="top-bar" class="bg-black text-white shadow-lg">
 			<div class="container">
-				<div class="row grid grid-cols-3 gap-x-12 items-center">
+				<div class="row grid sm:grid-cols-3 sm:gap-x-12 items-center">
 					<div class="col text-center">
-						<h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-						<h3>Lorem ipsum dolor sit amet.</h3>
+						<h2><span class="text-green-500">Today only</span> 30% off</h2>
+						<h3>plus free delivery</h3>
+						
 					</div>
 					<div class="col">
-						<div id="countdown" class="grid grid-cols-3">
-							<div class="time-unit">
-								<span id="hours">00</span>
-								<div>Hours</div>
+						<div id="countdown" class="flex items-center justify-center text-2xl">
+							<div class="flex flex-col items-center mx-2">
+								<span id="hours" class="font-mono">00</span>
+								<span class="text-xs">Hours</span>
 							</div>
-							<div class="time-unit">
-								<span id="minutes">00</span>
-								<div>Minutes</div>
+							<span class="mx-2">:</span>
+							<div class="flex flex-col items-center mx-2">
+								<span id="minutes" class="font-mono">00</span>
+								<span class="text-xs">Minutes</span>
 							</div>
-							<div class="time-unit">
-								<span id="seconds">00</span>
-								<div>Seconds</div>
+							<span class="mx-2">:</span>
+							<div class="flex flex-col items-center mx-2">
+								<span id="seconds" class="font-mono">00</span>
+								<span class="text-xs">Seconds</span>
 							</div>
 						</div>
 					</div>
-					<div class="col">
-						<div class="btn">Call to action</div>
+					<div class="col text-center">
+						<div class="btn text-black bg-green-500 px-2 py-1 inline-block">Unlock Offer</div>
 					</div>
 				</div>
 			</div>
