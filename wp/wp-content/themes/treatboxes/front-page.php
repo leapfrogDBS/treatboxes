@@ -82,9 +82,9 @@ get_header();
 					<p class="text-sm">PLEASE NOTE any items that are out of stock will be swapped with an item(s) of equivalent value that is as close as possible to the out of stock item.</p>
 				</div>
 				<div class="col" id="offer">
-					<h2 class="text-2xl md:text-3xl lg:text-4xl font-commuters mb-4">Limited-Time Offer: 30% Off + Free Shipping!</h2>
+					<h2 class="text-2xl md:text-3xl lg:text-4xl font-commuters mb-4">Limited-Time Offer: Save <span class="font-bold">£7.94</span> on Your First Box!</h2>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/treatbox.png" alt="Clean Gnashers Treat Box" class="w-full mb-2">
-					<p class="mt-4">Sign up today and get 30% off your first Clean Gnashers box, plus enjoy free shipping. This is the perfect opportunity to give your dog the dental care they deserve—without breaking the bank.</p>
+					<p class="mt-4">Sign up today and get your first Clean Gnashers box for just £11.19, normally £15.99, plus enjoy free shipping (usually £3.95). That's a total saving of £7.94. Don't miss out on this pawsome deal!</p>
 					<p class="mt-2">Our Clean Gnashers box is packed with natural, grain-free treats that not only taste great but also help keep your dog's teeth clean and healthy.</p>
 					<p class="mt-2 font-semibold">Why You Should Grab This Deal:</p>
 					<ul class="list-disc list-inside mt-2">
