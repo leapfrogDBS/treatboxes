@@ -34,11 +34,11 @@ get_header();
 		<div class="container z-20 relative">
 			<div class="row">
 				<div class="col lg:w-1/2 bg-white text-[#242424] p-10">
-					<h1 class="text-2xl md:text-3xl lg:text-4xl mb-2 font-commuters">Give Your Dog a Healthy Smile with Clean Gnashers</h1>
-					<h2 class="text-xl font-commuters mb-2">Did You Know That 2/3 Of Dogs Over The Age Of 3 Suffer From Periodontal Disease?</h2>
+					<h1 class="text-2xl md:text-3xl lg:text-4xl mb-2 font-commuters text-center">Give Your Dog a Healthy Smile!</h1>
+					<h2 class="text-xl font-commuters mb-2 text-center">Did You Know That 2/3 Of Dogs Over The Age Of 3 Suffer From Periodontal Disease?</h2>
 					<p class="mt-4 mb-2">It's the most common health issue plaguing our four-legged friends (Hiscox and Bellows, 2021).</p>
 					<p class="mb-2">This dental dilemma begins innocently enough—with the formation of plaque and tartar. But here's the good news: you have the power to change this. Imagine giving your dog a treat they'll love, which also keeps their teeth clean and gums healthy.</p>
-					<h2 class="text-lg md:text-2xl text-3xl mb-2 font-semibold">Clean Gnashers Monthly Subscription Boxes</h2>
+					<h2 class="text-lg md:text-2xl text-3xl mb-2 font-semibold text-center">Clean Gnashers Monthly Subscription Boxes</h2>
 					<p class="mb-2">Our Clean Gnashers subscription box delivers all-natural, chewable treats right to your doorstep, making dental care for your dog not just easy but also enjoyable.</p>
 					<a href="#whats-in-the-box" class="btn text-white font-bold bg-[#067A46] px-9 py-3 inline-block cursor-pointer hover:bg-black hover:text-white rounded text-base mt-5 w-full text-center">What's in the box?</a>
 				</div>
