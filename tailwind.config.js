@@ -6,7 +6,12 @@ module.exports = {
   content: ["./develop/**.php",
   "./develop/**/**.php",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['source-sans-pro', 'Arial', 'Helvetica', 'sans-serif'],
+        commuters: ['commuters-sans', 'Georgia', 'serif'],
+      },
+    },
   },
   plugins: [],
 }

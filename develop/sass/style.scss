@@ -68,7 +68,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base/base";
 
 /*--------------------------------------------------------------
 # Layouts
@@ -109,8 +108,33 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	scroll-behavior: smooth;
   }
-
+body {
+	@apply font-sans;
+}
 .container {
-	  @apply max-w-6xl mx-auto px-12 py-2;
+	  @apply max-w-6xl mx-auto px-6 md:px-12 py-2;
 }
 
+.swiper-button-prev::after, .swiper-button-next::after {
+	content: none !important;
+}
+
+.swiper-pagination-bullet {
+	background-color: #fff !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+	background-color: #D3E6A6 !important;
+  }
+  
+  p, li {
+	@apply  text-base lg:text-lg;
+  }
+
+
+  #mc_embed_signup .button {
+    width: 100% !important;
+	background-color: #067A46 !important;
+	font-family: source-sans-pro;
+	font-weight: 700 !important;
+  }

@@ -12,19 +12,23 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'treatboxes' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'treatboxes' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'treatboxes' ), 'treatboxes', '<a href="https://www.leapfrogdbs.co.uk/">Leapfrog Digital Business Solutions Ltd</a>' );
-				?>
-		</div><!-- .site-info -->
+		<section class="bg-[#343434] text-white py-2">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<p>Visit <a href="https://barkbites.co.uk/" class="text-[#D3E6A6] font-semibold" target="_blank">Our Web Shop</a> to view our full range of 100% natural dog treats</p>
+					</div>
+					<div class="col flex gap-x-6 justify-center mt-4 text-2xl">
+						<a href="https://www.facebook.com/people/Bark-Bites-Natural-Treats/100086821017309/" target="_blank"><i class="fa-brands fa-facebook text-white hover:text-[#D3E6A6]"></i></a>
+						<a href="https://www.instagram.com/barkbitesnaturaltreats/" target="_blank"><i class="fa-brands fa-instagram text-white hover:text-[#D3E6A6]"></i></a>
+						<a href="#" target="_blank" class="hidden"><i class="fa-brands fa-twitter text-white hover:text-[#D3E6A6]"></i></a>
+						<a href="#" target="_blank" class="hidden"><i class="fa-brands fa-youtube text-white hover:text-[#D3E6A6]"></i></a>
+						<a href="#" target="_blank" class="hidden"><i class="fa-brands fa-tiktok text-white hover:text-[#D3E6A6]"></i></a>
+						<a href="#" target="_blank" class="hidden"><i class="fa-brands fa-pinterest text-white hover:text-[#D3E6A6]"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
