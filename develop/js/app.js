@@ -42,4 +42,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Get all anchor tags
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  anchorLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+      // Prevent default behavior
+      event.preventDefault();
+
+      // Get the target element's ID from the clicked link's href attribute
+      const targetID = this.getAttribute("href").substring(1);
+
+      // Get the target element
+      const targetElement = document.getElementById(targetID);
+
+      // Get the height of the header
+      const header = document.querySelector("#top-bar");
+      const headerHeight = header.offsetHeight;
+
+      // Calculate the new scroll position
+      const scrollToPosition = targetElement.offsetTop - headerHeight;
+
+      // Scroll to the new position
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth"
+      });
+    });
+  });
+
 }); // DOMContentLoaded end

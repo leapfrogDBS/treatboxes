@@ -60,7 +60,7 @@
 	</header><!-- #masthead -->
 
 <!-- The Modal -->
-<div id="myModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-40 hidden">
+<div id="myModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 hidden">
   <!-- Modal content -->
 	<div class="modal-content bg-white px-8 py-4 rounded shadow-lg  w-10/12 md:w-1/2 lg:w-1/3 relative">
 		<span id="closeModalBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 cursor-pointer z-50">&times;</span>
