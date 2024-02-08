@@ -138,3 +138,23 @@ body {
 	font-family: source-sans-pro;
 	font-weight: 700 !important;
   }
+
+  #hero_copy {
+	h1 {
+		@apply text-2xl md:text-3xl lg:text-4xl mb-2 font-commuters text-center;
+	  }
+  
+	  h2 {
+		@apply text-xl font-commuters mb-2 text-center;
+	  }
+  
+	  h3 {
+		@apply text-lg md:text-2xl lg:text-3xl mb-2 font-semibold text-center;
+	  }
+  
+	  p {
+		@apply mt-4 mb-2;
+		// If the margin-bottom needs to be different from 2, you can specify that here
+	  }
+  
+  }

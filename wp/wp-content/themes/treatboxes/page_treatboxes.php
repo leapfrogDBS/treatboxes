@@ -2,49 +2,20 @@
 /* Template Name: Treatbox Offer Landing Page */
 
 get_header();
+
 ?>
 
 <main id="primary" class="site-main">
 
-	<section id="logo-header" class="bg-white py-2">
-		<div class="container">
-			<div class="row">
-				<div class="col flex justify-center">
-					<div class="flex flex-col items-center">
-						<a href="https://barkbites.co.uk/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/BB-logo.png" alt="Bark Bites Logo" class="h-11 w-auto mb-1"></a>
-						<a href="https://uk.trustpilot.com/review/barkbites.co.uk" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/truspilot.png" alt="Truspilot Logo" class="h-9 w-auto"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<?php
+		include(locate_template('template-parts/logo-header.php'));
+		include(locate_template('template-parts/hero.php'));
+		include(locate_template('template-parts/banner.php'));
+	?>
 
-	<section id="hero" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/dog-teeth.jpeg)" class="bg-cover bg-center py-12 text-white relative z-10">
-		<div class="container z-20 relative">
-			<div class="row">
-				<div class="col lg:w-1/2 bg-white text-[#242424] p-10">
-					<h1 class="text-2xl md:text-3xl lg:text-4xl mb-2 font-commuters text-center">Give Your Dog a Healthy Smile!</h1>
-					<h2 class="text-xl font-commuters mb-2 text-center">Did You Know That 2/3 Of Dogs Over The Age Of 3 Suffer From Periodontal Disease?</h2>
-					<p class="mt-4 mb-2">It's the most common health issue plaguing our four-legged friends (Hiscox and Bellows, 2021).</p>
-					<p class="mb-2">This dental dilemma begins innocently enough—with the formation of plaque and tartar. But here's the good news: you have the power to change this. Imagine giving your dog a treat they'll love, which also keeps their teeth clean and gums healthy.</p>
-					<h2 class="text-lg md:text-2xl text-3xl mb-2 font-semibold text-center">Clean Gnashers Monthly Subscription Boxes</h2>
-					<p class="mb-2">Our Clean Gnashers subscription box delivers all-natural, chewable treats right to your doorstep, making dental care for your dog not just easy but also enjoyable.</p>
-					<a href="#whats-in-the-box" class="btn text-white font-bold bg-[#067A46] px-9 py-3 inline-block cursor-pointer hover:bg-black hover:text-white rounded text-base mt-5 w-full text-center">What's in the box?</a>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 
-	<section id="banner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/banner.jpeg)" class="bg-center bg-cover py-12 lg:py-24 relative">
-		<div class="inset-0 absolute bg-black bg-opacity-20 z-10"></div>
-		<div class="container z-20 relative">
-			<div class="row">
-				<div class="col text-white text-center">
-					<h2 class="text-3xl md:text-4xl lg:text-5xl font-commuters font-semibold">100% Natural, Grain-Free, and Rawhide-Free for Your Peace of Mind</h2>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 
 	<section id="whats-in-the-box" class="py-12">
 		<div class="container">
